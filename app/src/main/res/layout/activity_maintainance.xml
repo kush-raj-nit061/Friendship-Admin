@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MaintainanceActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="Critical X"
+        android:textColor="@color/red"
+        android:textAlignment="center"
+        android:fontFamily="@font/ubuntu_regular"
+        android:layout_marginTop="40dp"/>
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="@string/aaa"
+        android:textAlignment="center"
+        android:fontFamily="@font/ubuntu_regular"
+        android:layout_marginTop="80dp"/>
+
+    <EditText
+        android:id="@+id/etValue"
+        android:layout_below="@id/tv"
+        android:layout_marginTop="15dp"
+        android:hint="0 or 1"
+        android:textAlignment="center"
+        android:textColorHint="@color/black_overlay"
+        android:textColor="@color/black"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_50_dp"
+        android:background="@drawable/container_search"
+        android:backgroundTint="@color/win_pest_bg2"
+        android:layout_marginHorizontal="40dp"
+        />
+
+    <Button
+        android:id="@id/save"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/etValue"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/padding_50_dp"
+        android:text="save"
+        android:layout_marginTop="@dimen/margin_30_dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:backgroundTint="@color/blue_inactive"
+    android:layout_height="match_parent"
+    tools:context=".HelpAndSupport">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_10_dp"
+                    android:background="#3B1544"
+                    android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:src="@drawable/baseline_person_24"
+                        android:layout_height="50dp"
+                        android:id="@+id/profile_image"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/username"
+                        android:textSize="22sp"
+                        android:text="@string/help_amp_support"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:layout_marginStart="25dp" />
+
+                </Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recHelp"/>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/add"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="40dp"
+        android:contentDescription="@string/todo" />
+
+
+
+
+
+</RelativeLayout>

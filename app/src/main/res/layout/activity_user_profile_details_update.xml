@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfileDetailsUpdate">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:background="#04B7CF"
+            android:layout_height="60dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/image"
+
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:text="@string/change_profile_details"/>
+
+
+
+        </Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/rv"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.zyp.cardview.YcCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ycCardElevation="2dp"
+                app:ycEndShadowColor="#04B7CF"
+                android:minHeight="120dp"
+
+                android:layout_marginTop="89dp"
+                android:layout_marginHorizontal="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Premium Resource-"
+                        android:textSize="14sp"
+                        android:layout_marginTop="120dp"/>
+
+
+                    <EditText
+                        android:id="@+id/premiumRes"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="140dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#04B7CF"
+                        android:background="@drawable/container_search"
+                        android:hint="premium resource"/>
+
+
+                    <TextView
+                        android:id="@+id/tvp"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:text="Premium Value(0/8)-"
+                        android:layout_below="@+id/premiumRes"
+
+                        android:textSize="14sp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/premium"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/tvp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#04B7CF"
+                        android:inputType="number"
+                        android:background="@drawable/container_search"
+                        android:hint="premium"/>
+                    <TextView
+                        android:id="@+id/tvbirth"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:text="Birthday-"
+                        android:layout_below="@+id/premium"
+                        android:textSize="14sp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/birthday"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/tvbirth"
+                        android:layout_height="wrap_content"
+                        android:textColor="#04B7CF"
+                        android:background="@drawable/container_search"
+                        android:hint="Birthday"/>
+                    <TextView
+                        android:id="@+id/tvpurl"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:text="Profile Url-"
+                        android:layout_below="@+id/birthday"
+
+                        android:textSize="14sp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/purl"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/tvpurl"
+                        android:layout_height="wrap_content"
+                        android:textColor="#04B7CF"
+                        android:background="@drawable/container_search"
+                        android:hint="Profile URl"/>
+                    <TextView
+                        android:id="@+id/tvbranch"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:text="Branch-"
+                        android:layout_below="@+id/purl"
+
+                        android:textSize="14sp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/branch"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/tvbranch"
+                        android:layout_height="wrap_content"
+                        android:textColor="#04B7CF"
+                        android:background="@drawable/container_search"
+                        android:hint="Branch"/>
+                    <TextView
+                        android:id="@+id/tvhobbies"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:text="Hobbies-"
+                        android:layout_below="@+id/branch"
+
+                        android:textSize="14sp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/hobbies"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/tvhobbies"
+                        android:layout_height="wrap_content"
+                        android:textColor="#04B7CF"
+                        android:background="@drawable/container_search"
+                        android:hint="Hobbies"/>
+
+
+                </RelativeLayout>
+
+
+
+
+            </com.zyp.cardview.YcCardView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_20_dp"/>
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/image"
+
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text=""/>
+            <TextView
+                android:id="@+id/userId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="4dp"
+                android:textIsSelectable="true"
+                android:textSize="16sp"
+                android:textColor="@color/red_active"
+                android:text=""/>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/rv"
+            android:text="Change Details"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="@dimen/margin_20_dp"
+            android:background="@color/red_active"/>
+
+
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    tools:openDrawer="start"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/friendship"
+                    android:layout_marginHorizontal="16dp"
+
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+<!--        jdjwdjd-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/white"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".MainActivity">
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00FFFFFF"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linear1"
+                    android:layout_marginTop="-10dp"
+                    android:background="@color/black"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/linear"
+                        android:orientation="horizontal"
+
+                        android:paddingLeft="@dimen/horizontal_dashboard"
+
+                        android:paddingRight="@dimen/horizontal_dashboard"
+
+
+                        android:weightSum="100">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible"
+                            app:lottie_autoPlay="true"
+                            app:lottie_rawRes="@raw/search"
+                            android:paddingTop="15dp"
+                            app:lottie_loop="true"
+                            app:lottie_speed="1"
+
+                            android:layout_weight="60"
+                            android:contentDescription="@string/imageAccess" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:orientation="vertical"
+                            android:layout_weight="40">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:fontFamily="@font/bariol_bold"
+                                android:text="@string/have_you_found_someone_lets_search"
+                                android:textColor="@color/white"
+                                android:textSize="30sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bariol_bold"
+                                android:layout_marginTop="-8dp"
+                                android:text="@string/let_s_search"
+                                android:textColor="@color/blue_active"
+                                android:textSize="30sp" />
+
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                    <com.alimuzaffar.lib.widgets.AnimatedEditText
+                        android:id="@+id/etSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/horizontal_dashboard"
+                        android:layout_marginTop="@dimen/normalPadding"
+                        app:animationType="fromRight"
+                        app:animateCursor="true"
+                        app:animateTextClear="true"
+                        android:layout_marginRight="@dimen/horizontal_dashboard"
+                        android:autofillHints="username"
+                        android:background="@drawable/container_search"
+
+
+                        android:drawablePadding="@dimen/drawable_left"
+
+                        android:fontFamily="@font/bariol_regular"
+                        android:gravity="center_vertical"
+
+
+                        android:hint="@string/edt_search"
+                        android:imeOptions="actionSearch"
+
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/normalPadding"
+                        android:paddingTop="@dimen/vertical_search"
+                        android:paddingRight="@dimen/normalPadding"
+                        android:paddingBottom="@dimen/vertical_search"
+                        android:singleLine="true"
+                        android:textColor="@color/blue_active"
+                        android:textColorHint="@color/color_hint"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:background="@null">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="80dp"
+                                android:background="@color/back_courses"
+                                android:orientation="vertical">
+
+                            </LinearLayout>
+
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/horizontal_card"
+                                android:minHeight="500dp"
+                                android:background="@color/white"
+                                android:layout_marginBottom="@dimen/horizontal_card"
+                                android:orientation="vertical">
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/userProfile"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:paddingTop="60dp"
+                                android:layout_height="200dp"
+                                android:layout_marginTop="80dp"
+                                android:layout_marginBottom="@dimen/horizontal_card"
+                                android:orientation="vertical">
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/progress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:visibility="visible"
+                                    app:lottie_autoPlay="true"
+                                    app:lottie_rawRes="@raw/progress"
+                                    android:paddingTop="15dp"
+                                    app:lottie_loop="true"
+                                    app:lottie_speed="1"
+
+                                    android:layout_weight="60"
+                                    android:contentDescription="@string/imageAccess" />
+
+
+
+
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </FrameLayout>
+
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:id="@+id/navmenu"
+        android:layout_gravity="start">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="230dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@color/black"
+                    android:contentDescription="@string/todo" />
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="#FFFFFF"
+
+                        >
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/quick_tool"
+                            android:fontFamily="@font/bariol_bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivDrawer"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/management"
+
+                            android:layout_marginStart="5dp" />
+                        <TextView
+                            android:id="@+id/drawerName"
+                            android:fontFamily="@font/bariol_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text=""
+                            android:textColor="#FFF1F1"
+                            android:textSize="18sp"
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:scrollHorizontally="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="35dp"/>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/branch"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Admin Account"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/bariol_regular"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_marginStart="5dp"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:paddingStart="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E4E3E3"
+                android:layout_below="@+id/top"
+                android:orientation="vertical"
+                android:id="@+id/Header"
+                tools:ignore="RtlSymmetry">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:backgroundTint="@color/cardview_light_background"
+                    android:layout_marginTop="2dp">
+                    <LinearLayout
+                        android:id="@+id/llhome2"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="2dp"
+                            app:tint="#495154"
+                             />
+                        <TextView
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profile"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"/>
+
+
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:id="@+id/cvFeatured"
+                    android:backgroundTint="@color/cardview_light_background"
+                    android:layout_marginTop="2dp">
+                    <LinearLayout
+                        android:id="@+id/llhome8"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+
+
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+
+                            android:layout_marginStart="2dp"
+                            app:tint="#495154"
+                             />
+                        <TextView
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/collaborations"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"/>
+
+
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:id="@+id/cvCoolFeatured"
+                    android:backgroundTint="@color/cardview_light_background"
+                    android:layout_marginTop="2dp">
+                    <LinearLayout
+                        android:id="@+id/llhome7"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+
+
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+
+                            android:layout_marginStart="2dp"
+                            app:tint="#495154"
+                             />
+                        <TextView
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/set_notifications"
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:scrollHorizontally="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"/>
+
+
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvCollab"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:backgroundTint="@color/cardview_light_background"
+                    android:layout_marginTop="2dp">
+                    <LinearLayout
+                        android:id="@+id/llhome4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+
+
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+
+                            android:layout_marginStart="2dp"
+                            app:tint="#495154"
+                            android:gravity="center_vertical"
+                             />
+                        <TextView
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:scrollHorizontally="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:text="@string/privacy_and_security"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"/>
+
+
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvMaintenance"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:backgroundTint="@color/cardview_light_background"
+                    android:layout_marginTop="2dp">
+
+                    <LinearLayout
+                        android:id="@+id/llhome3"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+
+
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+
+                            android:layout_gravity="center"
+                            android:layout_marginStart="2dp"
+
+                            app:tint="#495154"
+                             />
+                        <TextView
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/terms_and_conditions"
+
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:scrollHorizontally="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            />
+
+
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:backgroundTint="@color/cardview_light_background"
+                    android:layout_marginTop="2dp">
+                    <LinearLayout
+                        android:id="@+id/llhome5"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+
+
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+
+                            android:layout_marginStart="2dp"
+                            app:tint="#495154"
+                             />
+                        <TextView
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/help"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
