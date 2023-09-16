@@ -320,6 +320,7 @@
     <string name="change_profile_details">Change Profile Details</string>
     <string name="aaa">Don\'t change until you found Crashes in main Application</string>
     <string name="delete_idea">Delete idea</string>
+    <string name="admin_account">Admin Account</string>
 
 
 </resources>
